@@ -1,4 +1,4 @@
-class adi < Formula
+class Adi < Formula
   desc "ADI Stable Diffusion"
   homepage "https://github.com/Windsander/ADI-Stable-Diffusion"
   version "v1.0.1"
