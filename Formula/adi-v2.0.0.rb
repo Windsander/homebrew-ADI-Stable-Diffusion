@@ -4,14 +4,11 @@ class Adi < Formula
   version "v2.0.0"
   license "GPL-3.0 license"
 
-  if Hardware::CPU.intel?
-    url "https://github.com/Windsander/ADI-Stable-Diffusion/releases/download/release-v2.0.0/release-v2.0.0-macos-x86_64.tar.gz"
-    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
-  elsif Hardware::CPU.arm?
+  if Hardware::CPU.arm?
     url "https://github.com/Windsander/ADI-Stable-Diffusion/releases/download/release-v2.0.0/release-v2.0.0-macos-arm64.tar.gz"
     sha256 "5fc986cd7476558a1b9cbe16490a6c50810d9871c2507d301ab90711c04319d5"
   else
-    odie "Unsupported architecture"
+    odie "v2.0.0 ships no prebuilt package for this Mac architecture — please build from source (Method 3 in README)"
   end
 
 
